@@ -83,11 +83,11 @@ Caso 1) É um número divisível por 4, mas não é divisível por 100.
 Caso 2) É um número divisível por 4, por 100 e por 400.
 */
 
-let bi = 365
+let bi = 2024
 
-if(bi >= 366) {
+if((bi % 4 == 0 && bi % 100 != 0) || (bi % 4 == 0 && bi % 100 == 0 && bi % 400 == 0)) {
     console.log("Ano Bissexto")
-} else if(bi <= 365) {
+} else {
     console.log("Ano Normal")
 }
 
